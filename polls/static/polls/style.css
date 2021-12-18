@@ -1,0 +1,8 @@
+li a, h1, h3 {
+    color:cadetblue;
+}
+
+nav {
+    background: white url("images/background.png") no-repeat;
+    background-position: center;
+}

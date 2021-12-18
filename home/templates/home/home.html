@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}home{% endblock %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'home/style.css' %}">
+<h4>Django App</h4><br>
+<a href="{% url 'polls:index' %}"><h6>Vote App</h6></a>
+<a href="{% url 'bookmark:list' %}"><h6>Bookmark App</h6></a>
+<a href="{% url 'blog:post_list' %}"><h6>Blog App</h6></a>
+
+
+{% endblock %}

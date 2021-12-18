@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Detail
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'bookmark/style.css' %}">
+
+    {{"Site name : "}}{{object.site_name}}
+    <br>{{ "Site URL : " }}<a href="{{bookmark.url}}" target="_blank">{{object.url}}</a><p></p>
+    <a href="{% url 'bookmark:update' pk=bookmark.id %}" class="btn btn-success btn-sm">Modify</a>
+    <a href="{% url 'bookmark:delete' pk=bookmark.id %}" class="btn btn-danger btn-sm">Delete</a>
+    <a href="{% url 'bookmark:list' %}" class="btn btn-secondary btn-sm">Bookmark List</a>
+{% endblock %}
